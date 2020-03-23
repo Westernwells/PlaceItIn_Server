@@ -1,0 +1,44 @@
+type User {
+  id: ID! @id @unique
+  name:String!
+  password:String!
+  email:String! @unique
+  isProfile: Boolean!
+  profile:Profile
+}
+
+type Placement {
+  id: ID! @id 
+  title: String!
+        role: String!
+        stacks: String!
+        description: String!
+        type: String!
+        availability: String!
+        requirements: String!
+        image: String
+        cname: String!
+        caddress: String!
+        cmail: String!
+        cphone: String
+        conclusion: String!
+  user:User!
+}
+
+type Profile{
+  id: ID! @id 
+   name:String!
+   title:String!
+   stack:String!
+   bio:String!
+   email:String!
+   phone:String
+   github:String
+   portfolio:String
+   location:String!
+   interest:String
+   exp:String!
+   exps:String!
+   cover:String
+  conclusion:String!
+}
